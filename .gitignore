@@ -1,0 +1,19 @@
+# Python files
+*.pyc
+__pycache__/
+
+# Conda environment files
+env/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Streamlit cache
+.streamlit/
+
+# Virtual environment
+*.vizpy
