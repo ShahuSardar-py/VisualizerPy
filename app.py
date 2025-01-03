@@ -4,6 +4,7 @@ import plotly.express as px
 import pandas as pd
 from io import StringIO
 from utils.dataloader import load_csv, data_cleaner
+from utils.plot_generator import plot_generator
 
 st.set_page_config(
     page_icon='📊',
@@ -44,5 +45,7 @@ if uploaded_file:
 
         #list of plots
         plots=["Bar Chart", "Line Chart", "Scatter Plot"]
-        st.selectbox("Select Plot", options=plots)
-        
+        chart=st.selectbox("Select Plot", options=plots)
+
+if st.button("generate plot"):
+    plot_generator(xaxis,yaxis,chart,clean_df)
