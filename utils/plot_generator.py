@@ -8,8 +8,10 @@ def plot_generator(x,y,plot,df):
             fig= px.bar(df,x=x,y=y)
         elif plot=='Line Chart':
             fig=px.line(df,x=x,y=y)
+        elif plot =='Scatter Plot':
+            fig = px.scatter(df, x=x, y=y)
         else:
-            st.error("eoor")
+            st.error("An error Occured!")
             return
         st.plotly_chart(fig)
 
